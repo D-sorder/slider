@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slider__text-col">
+            <div class="slider__text-box">
+                <h2 class="slider__title">complited projects</h2>
+                <p class="slider__text">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families</p>
+                <div class="slider__info-box">
+                    <div class="slider__info">
+                        <h3 class="slider__info-title">city:</h3>
+                        <p id="city" class="slider__info-text">Rostov-on-Don LCD admiral</p>
+                    </div>
+                    <div class="slider__info">
+                        <h3 class="slider__info-title">apartment area:</h3>
+                        <p id="area" class="slider__info-text">81 m2</p>
+                    </div>
+                    <div class="slider__info">
+                        <h3 class="slider__info-title">Repair time:</h3>
+                        <p id="time" class="slider__info-text">3.5 months</p>
+                    </div>
+                    <div class="slider__info">
+                        <h3 class="slider__info-title">Repair Cost:</h3>
+                        <p id="cost" class="slider__info-text">Upon request</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__dots">
+                <img src="image/svg/left.svg" alt="" class="slider__left">
+                <ul class="slider__dot-box">
+                    <li data-navid = "0" class="slider__dot active"></li>
+                    <li data-navid = "1" class="slider__dot"></li>
+                    <li data-navid = "2" class="slider__dot"></li>
+                </ul>
+                <img src="image/svg/right.svg" alt="" class="slider__right">
+            </div>
+        </div>
+        <div class="slider__img-col">
+            <nav class="slider__nav">
+                <ul class="slider__links">
+                   <li data-navid = "0" class="slider__link active">Rostov-on-Don, Admiral</li>
+                   <li data-navid = "1" class="slider__link">Sochi Thieves</li> 
+                   <li data-navid = "2" class="slider__link">Rostov-on-Don Patriotic</li>  
+                </ul>
+            </nav>
+            <img src="image/jpg/image 0.jpg" alt="" class="slider__img">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

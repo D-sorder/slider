@@ -1,0 +1,179 @@
+@import url("fonts.css");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: "NunitoSans";
+}
+
+body {
+    background-color: #131313;
+}
+
+h2, h3, a {
+    color: #e3b873;
+    font-family: "YasevaOne";
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row;
+    max-width: 1171px;
+    margin: auto;
+    margin-top: 107px;
+    max-height: 482px;
+}
+
+.slider__text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.slider__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    justify-content: space-between;
+}
+
+.slider__title {
+    max-width: 250px;
+    position: relative;
+    font-size: 27px;
+    line-height: 138%;
+}
+
+.slider__title::after {
+    content: "";
+    display: block;
+    background-color: #e3b873;
+    width: 92px;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    bottom: .7em;
+}
+
+.slider__text {
+    font-size: 14px;
+    line-height: 191%;
+}
+
+.slider__info-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 29px 34px;
+}
+
+.slider__info {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.slider__info-title {
+    margin-bottom: 9px;
+    font-size: 18px;
+
+}
+
+.slider__info-text {
+    max-width: 50%;
+    line-height: 163%;
+    font-size: 14px;
+}
+
+.slider__dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 205px;
+}
+
+.slider__dots img {
+    cursor: pointer;
+}
+
+.slider__dot-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.slider__dot {
+    background-color: rgba(255, 255, 255, .3);
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.slider__dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider__img-col {
+    width: 60%;
+    position: relative;
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__nav {
+    position: absolute;
+    top: -54px;
+    left: 0;
+}
+
+.slider__links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.slider__link {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .3);
+    font-size: 14px;
+    line-height: 138%;
+    font-family: "YasevaOne";
+    cursor: pointer;
+}
+
+.slider__link.active {
+    color: #e3b873;
+    position: relative;
+}
+
+.slider__link.active::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e3b873;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+}
