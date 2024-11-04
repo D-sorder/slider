@@ -103,10 +103,11 @@ ul {
 
 .slider__dots {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    max-width: 205px;
+    min-width: 205px;
+    gap: 29px;
 }
 
 .slider__dots img {
@@ -145,13 +146,17 @@ ul {
 .slider__nav {
     position: absolute;
     top: -54px;
-    left: 0;
+    right: 0;
+    min-width: 100%;
+    display: flex;
+    width: auto;
 }
 
 .slider__links {
     display: flex;
     justify-content: flex-start;
     gap: 60px;
+    width: 100%;
 }
 
 .slider__link {
@@ -161,6 +166,7 @@ ul {
     line-height: 138%;
     font-family: "YasevaOne";
     cursor: pointer;
+    text-wrap: nowrap;
 }
 
 .slider__link.active {

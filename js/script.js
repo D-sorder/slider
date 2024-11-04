@@ -1,6 +1,6 @@
 const slider = document.querySelector(".slider");
-const nav = slider.querySelectorAll("[data-navid]")
-const dots = slider.querySelectorAll(".slider__dot");
+const dotBox = slider.querySelector(".slider__dot-box");
+const linkBox = slider.querySelector(".slider__links");
 const img = slider.querySelector(".slider__img");
 const left = slider.querySelector(".slider__left");
 const right = slider.querySelector(".slider__right");
@@ -21,9 +21,16 @@ let slides = [
         img: "image/jpg/image 0.jpg"
     }, 
     {
-        city: "Sochi <br> Thieves",
+        city: "Sochi Thieves",
         area: "105 m2",
         time: "4 months",
+        cost: "Upon request",
+        img: "image/jpg/image 1.jpg"
+    },
+    {
+        city: "Novosibirsk",
+        area: "95 m2",
+        time: "2 months",
         cost: "Upon request",
         img: "image/jpg/image 1.jpg"
     },
@@ -37,6 +44,25 @@ let slides = [
 ]
 
 let counter = 0;
+
+for(let i = 0; i < slides.length; i++ ) {
+    let dot = document.createElement("li");
+    let link = document.createElement("li");
+    dot.classList.add("slider__dot");
+    link.classList.add("slider__link");
+    dot.setAttribute("data-navid", i);
+    link.setAttribute("data-navid", i);
+    link.innerHTML = slides[i].city;
+    if (i==0) {
+        dot.classList.add("active");
+        link.classList.add("active");
+    }
+    dotBox.append(dot);
+    linkBox.append(link);
+}
+
+const dots = slider.querySelectorAll(".slider__dot");
+const nav = slider.querySelectorAll("[data-navid]");
 
 left.addEventListener("click", ()=> {
     counter--;
@@ -56,17 +82,6 @@ for (let elem of nav) {
         change(counter);
     })
 }
-
-// function classToggler (num) {
-//     for(let elem of nav) {
-//         elem.classList.remove("active");
-//     }
-    
-//     let activate = slider.querySelectorAll(`[data-navid = "${num}"]`);
-//     for(let a of activate) {
-//         a.classList.add("active");
-//     }
-// }
 
 function change (num) {
     for(inf in currentSlide) {
